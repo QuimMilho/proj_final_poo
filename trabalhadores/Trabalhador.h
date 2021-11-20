@@ -5,6 +5,9 @@
 #ifndef PROJ_FINAL_POO_TRABALHADOR_H
 #define PROJ_FINAL_POO_TRABALHADOR_H
 
+#define PRECO_OPERARIO 15
+#define PRECO_LENHADOR 20
+#define PRECO_MINEIRO 10
 
 class Trabalhador {
 
