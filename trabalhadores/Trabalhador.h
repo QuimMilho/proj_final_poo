@@ -12,8 +12,6 @@ protected:
     int nTrabalhador, diaContrato, probDespedir, minDespedir, tempoTrabalho, tempoFolga;
 
 public:
-    int getPreco() const;
-
     int getProbDespedir() const;
 
     int getMinDespedir() const;
