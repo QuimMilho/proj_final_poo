@@ -38,3 +38,7 @@ int Trabalhador::getTempoTrabalho () const {
 int Trabalhador::getTempoFolga () const {
     return tempoFolga;
 }
+
+bool Trabalhador::isAvailable () const {
+    return isWorking;
+}
