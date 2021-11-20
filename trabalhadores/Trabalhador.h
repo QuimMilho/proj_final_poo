@@ -26,6 +26,8 @@ public:
 
     int getTempoFolga () const;
 
+    void fimDoDia();
+
 };
 
 
