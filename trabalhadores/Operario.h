@@ -8,7 +8,8 @@
 #include "Trabalhador.h"
 
 class Operario : public Trabalhador {
-
+public:
+    Operario(int nTrabalhador, int diaContrato);
 };
 
 
