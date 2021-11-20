@@ -7,12 +7,20 @@
 
 
 class trabalhadores {
-private:
-    int n, d;
+protected:
+    int n, d, preco, prob_despedir, min_despedir;
+public:
+    int getPreco() const;
+
+    int getProbDespedir() const;
+
+    int getMinDespedir() const;
+
 public:
     int getN() const;
 
     int getD() const;
+
 };
 
 

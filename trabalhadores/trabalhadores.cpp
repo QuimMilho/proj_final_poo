@@ -11,3 +11,15 @@ int trabalhadores::getN() const {
 int trabalhadores::getD() const {
     return d;
 }
+
+int trabalhadores::getPreco() const {
+    return preco;
+}
+
+int trabalhadores::getProbDespedir() const {
+    return prob_despedir;
+}
+
+int trabalhadores::getMinDespedir() const {
+    return min_despedir;
+}
