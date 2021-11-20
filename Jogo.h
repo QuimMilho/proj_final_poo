@@ -6,7 +6,7 @@
 #define PROJ_FINAL_POO_JOGO_H
 
 
-class jogo {
+class Jogo {
 
 };
 

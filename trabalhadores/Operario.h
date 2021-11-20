@@ -5,9 +5,9 @@
 #ifndef PROJ_FINAL_POO_OPERARIO_H
 #define PROJ_FINAL_POO_OPERARIO_H
 
-#include "trabalhadores.h"
+#include "Trabalhador.h"
 
-class operario : public trabalhadores{
+class Operario : public Trabalhador {
 
 };
 
