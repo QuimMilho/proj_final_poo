@@ -14,8 +14,15 @@
 class Zona {
 private:
     std::string tipo;
+    std::string edificio;
 public:
+    Zona(std::string &tipo);
+
     std::string getTipo() const;
+    std::string getConst() const;
+
+    void setEdificio(const std::string &edificio);
+
 };
 
 
