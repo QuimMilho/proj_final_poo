@@ -2,9 +2,13 @@
 #ifndef PROJ_FINAL_POO_TRABALHADOR_H
 #define PROJ_FINAL_POO_TRABALHADOR_H
 
-#define PRECO_OPERARIO 15
-#define PRECO_LENHADOR 20
-#define PRECO_MINEIRO 10
+#define LENHADOR "len"
+#define MINEIRO "miner"
+#define OPERARIO "oper"
+
+#define B_LENHADOR "L"
+#define B_MINEIRO "M"
+#define B_OPERARIO "O"
 
 class Trabalhador {
 
@@ -24,6 +28,8 @@ public:
     int getTempoTrabalho () const;
 
     int getTempoFolga () const;
+
+    bool isAvailable () const;
 
     void fimDoDia();
 
