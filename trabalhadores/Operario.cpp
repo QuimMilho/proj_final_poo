@@ -4,4 +4,6 @@
 
 #include "Operario.h"
 
+void Trabalhador::fimDoDia() {
 
+}
