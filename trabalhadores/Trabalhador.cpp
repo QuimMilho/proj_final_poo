@@ -4,30 +4,39 @@
 
 #include "Trabalhador.h"
 
-int Trabalhador::getN() const {
-    return n;
+//CONSTRUCTOR
+
+Trabalhador::Trabalhador(int nTrabalhador, int diaContrato, int probDespedir, int minDespedir, int tempoTrabalho, int tempoFolga) {
+    this->nTrabalhador = nTrabalhador;
+    this->diaContrato = diaContrato;
+    this->probDespedir = probDespedir;
+    this->minDespedir = minDespedir;
+    this->tempoTrabalho = tempoTrabalho;
+    this->tempoFolga = tempoFolga;
 }
 
-int Trabalhador::getD() const {
-    return d;
+//GETTERS AND SETTERS
+
+int Trabalhador::getNTrabalhador() const {
+    return nTrabalhador;
 }
 
-int Trabalhador::getPreco() const {
-    return preco;
+int Trabalhador::getDiaContrato() const {
+    return diaContrato;
 }
 
 int Trabalhador::getProbDespedir() const {
-    return prob_despedir;
+    return probDespedir;
 }
 
 int Trabalhador::getMinDespedir() const {
-    return min_despedir;
+    return minDespedir;
 }
 
 int Trabalhador::getTempoTrabalho () const {
-    return tempo_trabalho;
+    return tempoTrabalho;
 }
 
 int Trabalhador::getTempoFolga () const {
-    return tempo_folga;
+    return tempoFolga;
 }

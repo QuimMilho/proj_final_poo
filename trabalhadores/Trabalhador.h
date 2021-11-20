@@ -9,7 +9,7 @@
 class Trabalhador {
 
 protected:
-    int n, d, preco, prob_despedir, min_despedir, tempo_trabalho, tempo_folga;
+    int nTrabalhador, diaContrato, probDespedir, minDespedir, tempoTrabalho, tempoFolga;
 
 public:
     int getPreco() const;
@@ -18,15 +18,17 @@ public:
 
     int getMinDespedir() const;
 
-    int getN() const;
+    int getNTrabalhador() const;
 
-    int getD() const;
+    int getDiaContrato() const;
 
     int getTempoTrabalho () const;
 
     int getTempoFolga () const;
 
     void fimDoDia();
+
+    Trabalhador(int nTrabalhador, int diaContrato, int probDespedir, int minDespedir, int tempoTrabalho, int tempoFolga);
 
 };
 
