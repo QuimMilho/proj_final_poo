@@ -13,6 +13,7 @@ class Trabalhador {
 
 protected:
     int nTrabalhador, diaContrato, probDespedir, minDespedir, tempoTrabalho, tempoFolga;
+    bool isWorking;
 
 public:
     int getProbDespedir() const;

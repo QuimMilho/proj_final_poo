@@ -13,6 +13,7 @@ Trabalhador::Trabalhador(int nTrabalhador, int diaContrato, int probDespedir, in
     this->minDespedir = minDespedir;
     this->tempoTrabalho = tempoTrabalho;
     this->tempoFolga = tempoFolga;
+    isWorking = true;
 }
 
 //GETTERS AND SETTERS
