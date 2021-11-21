@@ -11,7 +11,7 @@ void CommandHandler::registerCmd(const std::string cmdName, Comando *cmd) {
 
 //Registar Comandos
 void CommandHandler::registerCmds() {
-    registerCmd("exec", new CmdExec());
+    registerCmd("exec", new CmdExec(handler, this));
 }
 
 //Executar comandos

@@ -6,6 +6,7 @@
 #include <string>
 
 #include "Comando.h"
+#include "../Handler.h"
 
 class CommandHandler {
 private:
@@ -13,6 +14,7 @@ private:
     std::unordered_map<std::string, Comando*> cmds;
     //Registar comandos
     void registerCmd(const std::string cmdName, Comando *cmd);
+    Handler *handler;
 public:
     //Registar todos os comandos
     void registerCmds();
