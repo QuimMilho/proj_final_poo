@@ -3,6 +3,7 @@
 
 #include "CommandHandler.h"
 #include "cmds/CmdExec.h"
+#include "cmds/CmdCons.h"
 
 //Registar um comando
 void CommandHandler::registerCmd(const std::string cmdName, Comando *cmd) {
@@ -12,6 +13,7 @@ void CommandHandler::registerCmd(const std::string cmdName, Comando *cmd) {
 //Registar Comandos
 void CommandHandler::registerCmds() {
     registerCmd("exec", new CmdExec(handler, this));
+    registerCmd("cons", new CmdCons(handler));
 }
 
 //Executar comandos
