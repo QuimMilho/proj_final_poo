@@ -16,6 +16,7 @@
 #include "cmds/CmdLoad.h"
 #include "cmds/CmdApaga.h"
 #include "cmds/CmdConfig.h"
+#include "cmds/CmdLvlUp.h"
 
 CommandHandler::CommandHandler(Handler *handler) : handler(handler) {}
 
@@ -39,6 +40,7 @@ void CommandHandler::registerCmds() {
     registerCmd("load", new CmdLoad(handler));
     registerCmd("apaga", new CmdApaga(handler));
     registerCmd("config", new CmdConfig(handler));
+    registerCmd("lvlup", new CmdLvlUp(handler));
 }
 
 //Executar comandos
