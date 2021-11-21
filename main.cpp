@@ -4,7 +4,7 @@
 int main() {
     CommandHandler cmdHandler;
     cmdHandler.registerCmds();
-    std::string str = "exec";
+    std::string str = "exec dxfcvb sfdxfgfc";
     cmdHandler.executar(str);
     return 0;
 }
