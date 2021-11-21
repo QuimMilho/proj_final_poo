@@ -35,7 +35,8 @@ void CommandHandler::executar(std::string cmd) {
                 temp += c;
         }
     }
-    args.push_back(temp);
+    if (!temp.empty())
+        args.push_back(temp);
     if (cmds.count(cmdName) == 1) {
         int err = cmds.at(cmdName)->execute(&args);
         if (err != 0)
