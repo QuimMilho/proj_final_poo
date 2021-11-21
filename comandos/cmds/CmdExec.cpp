@@ -1,10 +1,12 @@
 
 #include "CmdExec.h"
 
-CmdExec::CmdExec(Handler *handler, Handler *handler1) : Comando(handler), handler(handler) {}
-
 int CmdExec::execute(std::vector<std::string> *args) {
+    if (args->size() == 1) {
 
+    } else {
+        std::cout << "O numero de argumentos do comando e invalido!";
+    }
     return 0;
 }
 

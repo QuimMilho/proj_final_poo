@@ -13,7 +13,6 @@ private:
     std::unordered_map<std::string, Comando*> cmds;
     //Registar comandos
     void registerCmd(const std::string cmdName, Comando *cmd);
-    Handler *handler;
 public:
     //Registar todos os comandos
     void registerCmds();
@@ -21,8 +20,6 @@ public:
     void executar(std::string cmd);
     //GETTERS
     std::unordered_map<std::string, Comando*> getCmds() const;
-    //SETTERS
-    void setHandler(Handler * handler);
 };
 
 
