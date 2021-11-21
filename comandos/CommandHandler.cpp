@@ -17,8 +17,10 @@
 #include "cmds/CmdApaga.h"
 #include "cmds/CmdConfig.h"
 #include "cmds/CmdLvlUp.h"
-#include "cmds/CmdExit.h"
 #include "cmds/CmdCrtZn.h"
+#include "cmds/CmdExit.h"
+
+#include "cmds/debug/CmdDebugCash.h"
 
 CommandHandler::CommandHandler(Handler *handler) : handler(handler) {}
 
@@ -46,7 +48,7 @@ void CommandHandler::registerCmds() {
     registerCmd("lvlup", new CmdLvlUp(handler));
     registerCmd("start", new CmdCrtZn(handler));
     //DEBUG
-
+    registerCmd("debcash", new CmdDebugCash(handler));
     //EXIT
     CmdExit *cmdExit = new CmdExit(handler);
     registerCmd("exit", cmdExit);
