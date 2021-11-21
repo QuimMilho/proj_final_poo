@@ -5,6 +5,8 @@
 #include "cmds/CmdExec.h"
 #include "cmds/CmdCons.h"
 
+CommandHandler::CommandHandler(Handler *handler) : handler(handler) {}
+
 //Registar um comando
 void CommandHandler::registerCmd(const std::string cmdName, Comando *cmd) {
     cmds.insert(std::pair<std::string, Comando*>(cmdName, cmd));

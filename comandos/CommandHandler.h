@@ -22,6 +22,7 @@ public:
     void executar(std::string cmd);
     //GETTERS
     std::unordered_map<std::string, Comando*> getCmds() const;
+    CommandHandler(Handler *handler);
 };
 
 
