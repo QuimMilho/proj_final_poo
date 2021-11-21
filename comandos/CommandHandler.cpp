@@ -10,6 +10,7 @@
 #include "cmds/CmdVende.h"
 #include "cmds/CmdCont.h"
 #include "cmds/CmdList.h"
+#include "cmds/CmdNext.h"
 
 CommandHandler::CommandHandler(Handler *handler) : handler(handler) {}
 
@@ -28,6 +29,7 @@ void CommandHandler::registerCmds() {
     registerCmd("vende", new CmdVende(handler));
     registerCmd("cont", new CmdCont(handler));
     registerCmd("list", new CmdList(handler));
+    registerCmd("next", new CmdNext(handler));
 }
 
 //Executar comandos
