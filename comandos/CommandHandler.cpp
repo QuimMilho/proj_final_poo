@@ -40,9 +40,9 @@ void CommandHandler::executar(std::string cmd) {
     if (cmds.count(cmdName) == 1) {
         int err = cmds.at(cmdName)->execute(&args);
         if (err != 0)
-            std::cout << "Ocorreu um erro ao executar o comando " << cmdName << "!";
+            std::cout << "Ocorreu um erro ao executar o comando " << cmdName << "!\n";
     } else {
-        std::cout << "Comando inexistente!";
+        std::cout << "Comando inexistente!\n";
     }
 }
 
