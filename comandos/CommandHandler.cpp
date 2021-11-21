@@ -13,6 +13,7 @@
 #include "cmds/CmdList.h"
 #include "cmds/CmdNext.h"
 #include "cmds/CmdSave.h"
+#include "cmds/CmdLoad.h"
 
 CommandHandler::CommandHandler(Handler *handler) : handler(handler) {}
 
@@ -33,6 +34,7 @@ void CommandHandler::registerCmds() {
     registerCmd("list", new CmdList(handler));
     registerCmd("next", new CmdNext(handler));
     registerCmd("save", new CmdSave(handler));
+    registerCmd("load", new CmdLoad(handler));
 }
 
 //Executar comandos
