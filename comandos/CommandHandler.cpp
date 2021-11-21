@@ -15,8 +15,8 @@ void CommandHandler::registerCmds() {
 }
 
 //Executar comandos
-void executar(const std::string cmd) {
-    int i, k = 0;
+void CommandHandler::executar(std::string cmd) {
+    int i;
     bool done = false;
     std::string cmdName, temp;
     std::vector<std::string> args;
@@ -34,6 +34,14 @@ void executar(const std::string cmd) {
             } else
                 temp += c;
         }
+    }
+    args.push_back(temp);
+    if (cmds.count(cmdName) == 1) {
+        int err = cmds.at(cmdName)->execute(&args);
+        if (err != 0)
+            std::cout << "Ocorreu um erro ao executar o comando " << cmdName << "!";
+    } else {
+        std::cout << "Comando inexistente!";
     }
 }
 
