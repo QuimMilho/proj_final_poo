@@ -7,9 +7,12 @@
 class Handler {
 private:
     CommandHandler *cmdHand;
+    bool inGame;
 public:
     CommandHandler *getCmdHand() const;
     Handler();
+    bool isInGame() const;
+    void switchInGame();
 };
 
 

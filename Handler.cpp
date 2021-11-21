@@ -10,3 +10,14 @@ Handler::Handler() {
 CommandHandler *Handler::getCmdHand() const {
     return cmdHand;
 }
+
+bool Handler::isInGame() const {
+    return inGame;
+}
+
+void Handler::switchInGame() {
+    if (inGame)
+        inGame = false;
+    else
+        inGame = true;
+}
