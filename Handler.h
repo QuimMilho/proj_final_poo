@@ -6,9 +6,9 @@
 
 class Handler {
 private:
-    CommandHandler cmdHand;
+    CommandHandler *cmdHand;
 public:
-    CommandHandler getCmdHand() const;
+    CommandHandler *getCmdHand() const;
     Handler();
 };
 
