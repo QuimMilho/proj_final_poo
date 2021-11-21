@@ -17,6 +17,7 @@
 #include "cmds/CmdApaga.h"
 #include "cmds/CmdConfig.h"
 #include "cmds/CmdLvlUp.h"
+#include "cmds/CmdExit.h"
 
 CommandHandler::CommandHandler(Handler *handler) : handler(handler) {}
 
@@ -41,6 +42,9 @@ void CommandHandler::registerCmds() {
     registerCmd("apaga", new CmdApaga(handler));
     registerCmd("config", new CmdConfig(handler));
     registerCmd("lvlup", new CmdLvlUp(handler));
+    CmdExit *cmdExit = new CmdExit(handler);
+    registerCmd("exit", cmdExit);
+    registerCmd("quit", cmdExit);
 }
 
 //Executar comandos
