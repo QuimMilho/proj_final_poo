@@ -6,6 +6,7 @@
 #include "cmds/CmdCons.h"
 #include "cmds/CmdLiga.h"
 #include "cmds/CmdDes.h"
+#include "cmds/CmdMove.h"
 
 CommandHandler::CommandHandler(Handler *handler) : handler(handler) {}
 
@@ -20,6 +21,7 @@ void CommandHandler::registerCmds() {
     registerCmd("cons", new CmdCons(handler));
     registerCmd("liga", new CmdLiga(handler));
     registerCmd("des", new CmdDes(handler));
+    registerCmd("move", new CmdMove(handler));
 }
 
 //Executar comandos
