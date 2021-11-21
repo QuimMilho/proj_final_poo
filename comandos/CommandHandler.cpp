@@ -23,6 +23,7 @@
 #include "cmds/debug/CmdDebugCash.h"
 #include "cmds/debug/CmdDebugEd.h"
 #include "cmds/debug/CmdDebugKill.h"
+#include "cmds/debug/CmdDebugLvlUp.h"
 
 CommandHandler::CommandHandler(Handler *handler) : handler(handler) {}
 
@@ -53,6 +54,7 @@ void CommandHandler::registerCmds() {
     registerCmd("debcash", new CmdDebugCash(handler));
     registerCmd("debed", new CmdDebugEd(handler));
     registerCmd("debkill", new CmdDebugKill(handler));
+    registerCmd("deblvlup", new CmdDebugLvlUp(handler));
     //EXIT
     CmdExit *cmdExit = new CmdExit(handler);
     registerCmd("exit", cmdExit);
