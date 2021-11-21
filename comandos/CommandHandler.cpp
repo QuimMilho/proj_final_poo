@@ -18,6 +18,7 @@
 #include "cmds/CmdConfig.h"
 #include "cmds/CmdLvlUp.h"
 #include "cmds/CmdExit.h"
+#include "cmds/CmdCrtZn.h"
 
 CommandHandler::CommandHandler(Handler *handler) : handler(handler) {}
 
@@ -28,6 +29,7 @@ void CommandHandler::registerCmd(const std::string cmdName, Comando *cmd) {
 
 //Registar Comandos
 void CommandHandler::registerCmds() {
+    //CMDS
     registerCmd("exec", new CmdExec(handler, this));
     registerCmd("cons", new CmdCons(handler));
     registerCmd("liga", new CmdLiga(handler));
@@ -42,6 +44,10 @@ void CommandHandler::registerCmds() {
     registerCmd("apaga", new CmdApaga(handler));
     registerCmd("config", new CmdConfig(handler));
     registerCmd("lvlup", new CmdLvlUp(handler));
+    registerCmd("start", new CmdCrtZn(handler));
+    //DEBUG
+
+    //EXIT
     CmdExit *cmdExit = new CmdExit(handler);
     registerCmd("exit", cmdExit);
     registerCmd("quit", cmdExit);
