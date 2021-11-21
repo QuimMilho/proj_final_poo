@@ -5,7 +5,13 @@
 #include "../Comando.h"
 
 class CmdExec : public Comando {
+private:
+    Handler *handler;
 public:
+    CmdExec(Handler *handler);
+
+    CmdExec(Handler *handler, Handler *handler1);
+
     int execute(std::vector<std::string> *args) override;
 
     virtual ~CmdExec();

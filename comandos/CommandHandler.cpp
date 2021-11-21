@@ -11,7 +11,7 @@ void CommandHandler::registerCmd(const std::string cmdName, Comando *cmd) {
 
 //Registar Comandos
 void CommandHandler::registerCmds() {
-    registerCmd("exec", new CmdExec());
+    registerCmd("exec", new CmdExec(handler));
 }
 
 //Executar comandos
@@ -50,4 +50,8 @@ void CommandHandler::executar(std::string cmd) {
 
 std::unordered_map<std::string, Comando*> CommandHandler::getCmds() const {
     return cmds;
+}
+
+void CommandHandler::setHandler(Handler * handler) {
+    this->handler = handler;
 }
