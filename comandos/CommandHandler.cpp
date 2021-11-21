@@ -14,6 +14,7 @@
 #include "cmds/CmdNext.h"
 #include "cmds/CmdSave.h"
 #include "cmds/CmdLoad.h"
+#include "cmds/CmdApaga.h"
 
 CommandHandler::CommandHandler(Handler *handler) : handler(handler) {}
 
@@ -35,6 +36,7 @@ void CommandHandler::registerCmds() {
     registerCmd("next", new CmdNext(handler));
     registerCmd("save", new CmdSave(handler));
     registerCmd("load", new CmdLoad(handler));
+    registerCmd("apaga", new CmdApaga(handler));
 }
 
 //Executar comandos
