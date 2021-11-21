@@ -76,8 +76,10 @@ void CommandHandler::executar(std::string cmd) {
                 cmdName += c;
         } else {
             if (c == ' ') {
-                args.push_back(temp);
-                temp.assign("");
+                if (!temp.empty()) {
+                    args.push_back(temp);
+                    temp.assign("");
+                }
             } else
                 temp += c;
         }
