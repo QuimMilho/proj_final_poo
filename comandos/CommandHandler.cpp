@@ -21,6 +21,7 @@
 #include "cmds/CmdExit.h"
 
 #include "cmds/debug/CmdDebugCash.h"
+#include "cmds/debug/CmdDebugEd.h"
 
 CommandHandler::CommandHandler(Handler *handler) : handler(handler) {}
 
@@ -49,6 +50,7 @@ void CommandHandler::registerCmds() {
     registerCmd("start", new CmdCrtZn(handler));
     //DEBUG
     registerCmd("debcash", new CmdDebugCash(handler));
+    registerCmd("debed", new CmdDebugEd(handler));
     //EXIT
     CmdExit *cmdExit = new CmdExit(handler);
     registerCmd("exit", cmdExit);
