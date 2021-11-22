@@ -8,7 +8,7 @@
 #include "../Handler.h"
 
 class Comando {
-private:
+protected:
     Handler *handler;
 public:
     Comando(Handler *handler);
