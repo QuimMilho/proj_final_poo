@@ -3,10 +3,11 @@
 #define PROJ_FINAL_POO_HANDLER_H
 
 #include <vector>
+#include <string>
 
 class Handler {
-private:
-
+public:
+    bool isNumber(std::string text);
 };
 
 
