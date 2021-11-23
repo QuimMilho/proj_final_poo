@@ -1,0 +1,11 @@
+
+#ifndef PROJ_FINAL_POO_TRABALHADOR_H
+#define PROJ_FINAL_POO_TRABALHADOR_H
+
+
+class Trabalhador {
+
+};
+
+
+#endif //PROJ_FINAL_POO_TRABALHADOR_H
