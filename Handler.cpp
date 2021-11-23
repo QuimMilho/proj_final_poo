@@ -29,7 +29,7 @@ bool Handler::isFloat(std::string text) {
     return true;
 }
 
-bool isValid(std::string tipo, std::string text) {
+bool Handler::isValid(std::string tipo, std::string text) {
     if (tipo == EDIFICIO || tipo == ALL_TYPES) {
         if (text == MINA_FERRO || text == MINA_CARVAO || text == CEN_ELETRICA || text == BATERIA || text == FUNDICAO ||
                 text == EDIFIDIO_X)
@@ -50,4 +50,10 @@ bool isValid(std::string tipo, std::string text) {
             return true;
     }
     return false;
+}
+
+//GETTERS
+
+bool Handler::isGameRunning() const {
+    return isRunning;
 }

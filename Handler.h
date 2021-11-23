@@ -51,6 +51,9 @@
 
 class Handler {
 private:
+    //Jogo
+    bool isRunning = false;
+    int x = -1, y = -1;
     //Preco Edificios
     int p_mnF = 10, up_mnF = 15;
     int p_mnC = 10, up_mnC = 10;
@@ -73,6 +76,7 @@ public:
     bool isNumber(std::string text);
     bool isFloat(std::string text);
     bool isValid(std::string tipo, std::string text);
+    bool isGameRunning() const;
 };
 
 
