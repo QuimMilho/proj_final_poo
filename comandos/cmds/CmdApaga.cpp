@@ -13,8 +13,8 @@ int CmdApaga::execute(std::vector<std::string> *args)  {
             file.close();
             return 0;
         }
-        std::remove(path.c_str());
         file.close();
+        std::remove(path.c_str());
     } else {
         std::cout << "O numero de argumentos do comando e invalido!\n";
     }
