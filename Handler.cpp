@@ -72,25 +72,29 @@ bool Handler::areCoordsValid(std::string linha, std::string coluna) {
     if (n1 <= 0 || n2 <= 0) {
         std::cout << "Os numeros nao podem ser negativos!\n";
         return false;
-    } else if (n1 > y || n2 > x) {
+    } else if (n1 > linhas || n2 > colunas) {
         std::cout << "Os numeros devem estar dentro dos limites do tabuleiro!\n";
         return false;
     }
     return true;
 }
 
-//GETTERS
+int Handler::generateInt(int number) {
+    return 0;
+}
+
+//GETTERS AND SETTERS
 
 bool Handler::isGameRunning() const {
     return isRunning;
 }
 
-int Handler::getX() const {
-    return x;
+int Handler::getColuna() const {
+    return colunas;
 }
 
-int Handler::getY() const {
-    return y;
+int Handler::getLinha() const {
+    return linhas;
 }
 
 int Handler::getNumberOfWorkers() const {
@@ -169,4 +173,12 @@ void Handler::setVVWod(float vVWod) {
 
 void Handler::setVWhat(float vWhat) {
     v_what = vWhat;
+}
+
+void Handler::setLinha(int linha) {
+    linhas = linha;
+}
+
+void Handler::setColuna(int coluna) {
+    colunas = coluna;
 }

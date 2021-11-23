@@ -63,8 +63,9 @@ class Handler {
 private:
     //Jogo
     bool isRunning = false;
-    int x = -1, y = -1;
+    int colunas = -1, linhas = -1;
     std::list<Trabalhador*> workers;
+    std::list<Zona*> zonas;
     //Preco Edificios
     int p_mnF = 10, up_mnF = 15;
     int p_mnC = 10, up_mnC = 10;
@@ -90,9 +91,10 @@ public:
     bool areCoordsValid(std::string linha, std::string coluna);
     //GETTERS
     bool isGameRunning() const;
-    int getX() const;
-    int getY() const;
+    int getColuna() const;
+    int getLinha() const;
     int getNumberOfWorkers() const;
+    int generateInt(int number);
     //SETTERS
     void setPMnF(int pMnF);
     void setUpMnF(int upMnF);
@@ -112,6 +114,8 @@ public:
     void setVWood(float vWood);
     void setVVWod(float vVWod);
     void setVWhat(float vWhat);
+    void setLinha(int linha);
+    void setColuna(int coluna);
 };
 
 
