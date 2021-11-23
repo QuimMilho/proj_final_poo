@@ -18,6 +18,7 @@ public:
     Edificio *getEdificio() const;
     int deleteBuilding();
     virtual int addBuilding(std::string tipoEd);
+    bool hasBuilding();
 };
 
 #endif //PROJ_FINAL_POO_ZONA_H

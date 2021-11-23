@@ -5,6 +5,12 @@ Zona::Zona(std::string tipo) : tipo(tipo) {}
 
 Zona::~Zona() {}
 
+bool Zona::hasBuilding() {
+    if (edificio == nullptr)
+        return false;
+    return true;
+}
+
 Edificio *Zona::getEdificio() const {
     return edificio;
 }
