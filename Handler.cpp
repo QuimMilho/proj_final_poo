@@ -52,6 +52,29 @@ bool Handler::isValid(std::string tipo, std::string text) {
     return false;
 }
 
+bool Handler::areCoordsValid(std::string linha, std::string coluna) {
+    bool isN1 = isNumber(linha), isN2 = isNumber(coluna);
+    if (!isN1 && !isN2) {
+        std::cout << "Ambos os argumentos devem ser numeros!\n";
+        return false;
+    } else if (!isN1) {
+        std::cout << "O primeiro argumento deve ser um numero!\n";
+        return false;
+    } else if (!isN2) {
+        std::cout << "O segundo argumento deve ser um numero!\n";
+        return false;
+    }
+    int n1 = std::stoi(linha), n2 = std::stoi(coluna);
+    if (n1 <= 0 || n2 <= 0) {
+        std::cout << "Os numeros nao podem ser negativos!\n";
+        return false;
+    } else if (n1 > y || n2 > x) {
+        std::cout << "Os numeros devem estar dentro dos limites do tabuleiro!\n";
+        return false;
+    }
+    return true;
+}
+
 //GETTERS
 
 bool Handler::isGameRunning() const {

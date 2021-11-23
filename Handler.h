@@ -4,6 +4,7 @@
 
 #include <vector>
 #include <string>
+#include <iostream>
 #include "zonas/Zona.h"
 
 #define ALL_TYPES "*"
@@ -76,6 +77,8 @@ public:
     bool isNumber(std::string text);
     bool isFloat(std::string text);
     bool isValid(std::string tipo, std::string text);
+    bool areCoordsValid(std::string linha, std::string coluna);
+    //GETTERS
     bool isGameRunning() const;
     int getX() const;
     int getY() const;
