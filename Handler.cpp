@@ -28,3 +28,26 @@ bool Handler::isFloat(std::string text) {
     }
     return true;
 }
+
+bool isValid(std::string tipo, std::string text) {
+    if (tipo == EDIFICIO || tipo == ALL_TYPES) {
+        if (text == MINA_FERRO || text == MINA_CARVAO || text == CEN_ELETRICA || text == BATERIA || text == FUNDICAO ||
+                text == EDIFIDIO_X)
+            return true;
+    }
+    if (tipo == TRABALHADORES || tipo == ALL_TYPES) {
+        if (text == MINEIRO || text == OPERARIO || text == LENHADOR)
+            return true;
+    }
+    if (tipo == ZONAS || tipo == ALL_TYPES) {
+        if (text == DESERTO || text == PASTAGEM || text == FLORESTA || text == MONTANHA || text == PANTANO ||
+                text == ZONA_X)
+            return true;
+    }
+    if (tipo == RECURSOS || tipo == ALL_TYPES) {
+        if (text == FERRO || text == BARRA_ACO || text == CARVAO || text == MADEIRA || text == VIGAS_WOOD ||
+                text == ELETRICIDADE)
+            return true;
+    }
+    return false;
+}

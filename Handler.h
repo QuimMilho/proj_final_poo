@@ -6,7 +6,11 @@
 #include <string>
 #include "zonas/Zona.h"
 
+#define ALL_TYPES "*"
+
 //Edificios
+
+#define EDIFICIO "edif"
 
 #define MINA_FERRO "mnF"
 #define MINA_CARVAO "mnC"
@@ -17,11 +21,15 @@
 
 //Trabalhadores
 
+#define TRABALHADORES "trab"
+
 #define MINEIRO "minr"
 #define LENHADOR "len"
 #define OPERARIO "oper"
 
 //Zonas
+
+#define ZONAS "zone"
 
 #define MONTANHA "mnt"
 #define DESERTO "dsr"
@@ -31,6 +39,8 @@
 #define ZONA_X "rav"
 
 //Recursos
+
+#define RECURSOS "recu"
 
 #define FERRO "iron"
 #define BARRA_ACO "stel"
@@ -62,6 +72,7 @@ private:
 public:
     bool isNumber(std::string text);
     bool isFloat(std::string text);
+    bool isValid(std::string tipo, std::string text);
 };
 
 
