@@ -4,6 +4,7 @@
 
 #include <vector>
 #include <string>
+#include "zonas/Zona.h"
 
 //Edificios
 
@@ -12,7 +13,7 @@
 #define EST_ELETRICA "elec"
 #define BATERIA "bat"
 #define FUNDICAO "fun"
-#define EDIFIDIO_X "edX"
+#define EDIFIDIO_X "hot"
 
 //Trabalhadores
 
