@@ -49,6 +49,10 @@ bool Handler::isValid(std::string tipo, std::string text) {
                 text == ELETRICIDADE)
             return true;
     }
+    if (tipo == UPGRADES || tipo == ALL_TYPES) {
+        if (text == UP_BATERIA || text == UP_MINA_CARVAO || text == UP_MINA_FERRO)
+            return true;
+    }
     return false;
 }
 
@@ -93,4 +97,76 @@ int Handler::getNumberOfWorkers() const {
     if (workers.empty())
         return 0;
     return (int) workers.size();
+}
+
+void Handler::setPMnF(int pMnF) {
+    p_mnF = pMnF;
+}
+
+void Handler::setUpMnF(int upMnF) {
+    up_mnF = upMnF;
+}
+
+void Handler::setPMnC(int pMnC) {
+    p_mnC = pMnC;
+}
+
+void Handler::setUpMnC(int upMnC) {
+    up_mnC = upMnC;
+}
+
+void Handler::setPElec(int pElec) {
+    p_elec = pElec;
+}
+
+void Handler::setPBat(int pBat) {
+    p_bat = pBat;
+}
+
+void Handler::setUpBat(int upBat) {
+    up_bat = upBat;
+}
+
+void Handler::setPFun(int pFun) {
+    p_fun = pFun;
+}
+
+void Handler::setPHot(int pHot) {
+    p_hot = pHot;
+}
+
+void Handler::setPOper(int pOper) {
+    p_oper = pOper;
+}
+
+void Handler::setPLen(int pLen) {
+    p_len = pLen;
+}
+
+void Handler::setPMinr(int pMinr) {
+    p_minr = pMinr;
+}
+
+void Handler::setVIron(float vIron) {
+    v_iron = vIron;
+}
+
+void Handler::setVStel(float vStel) {
+    v_stel = vStel;
+}
+
+void Handler::setVCoal(float vCoal) {
+    v_coal = vCoal;
+}
+
+void Handler::setVWood(float vWood) {
+    v_wood = vWood;
+}
+
+void Handler::setVVWod(float vVWod) {
+    v_vWod = vVWod;
+}
+
+void Handler::setVWhat(float vWhat) {
+    v_what = vWhat;
 }

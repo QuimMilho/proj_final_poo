@@ -21,6 +21,14 @@
 #define FUNDICAO "fun"
 #define EDIFIDIO_X "hot"
 
+//Upgrades
+
+#define UPGRADES "upg"
+
+#define UP_MINA_FERRO "upmnF"
+#define UP_MINA_CARVAO "upmnC"
+#define UP_BATERIA "upbat"
+
 //Trabalhadores
 
 #define TRABALHADORES "trab"
@@ -85,6 +93,25 @@ public:
     int getX() const;
     int getY() const;
     int getNumberOfWorkers() const;
+    //SETTERS
+    void setPMnF(int pMnF);
+    void setUpMnF(int upMnF);
+    void setPMnC(int pMnC);
+    void setUpMnC(int upMnC);
+    void setPElec(int pElec);
+    void setPBat(int pBat);
+    void setUpBat(int upBat);
+    void setPFun(int pFun);
+    void setPHot(int pHot);
+    void setPOper(int pOper);
+    void setPLen(int pLen);
+    void setPMinr(int pMinr);
+    void setVIron(float vIron);
+    void setVStel(float vStel);
+    void setVCoal(float vCoal);
+    void setVWood(float vWood);
+    void setVVWod(float vVWod);
+    void setVWhat(float vWhat);
 };
 
 
