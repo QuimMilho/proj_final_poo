@@ -57,3 +57,11 @@ bool Handler::isValid(std::string tipo, std::string text) {
 bool Handler::isGameRunning() const {
     return isRunning;
 }
+
+int Handler::getX() const {
+    return x;
+}
+
+int Handler::getY() const {
+    return y;
+}

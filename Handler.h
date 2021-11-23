@@ -77,6 +77,8 @@ public:
     bool isFloat(std::string text);
     bool isValid(std::string tipo, std::string text);
     bool isGameRunning() const;
+    int getX() const;
+    int getY() const;
 };
 
 
