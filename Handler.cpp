@@ -88,3 +88,9 @@ int Handler::getX() const {
 int Handler::getY() const {
     return y;
 }
+
+int Handler::getNumberOfWorkers() const {
+    if (workers.empty())
+        return 0;
+    return (int) workers.size();
+}

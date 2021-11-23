@@ -2,10 +2,11 @@
 #ifndef PROJ_FINAL_POO_HANDLER_H
 #define PROJ_FINAL_POO_HANDLER_H
 
-#include <vector>
+#include <list>
 #include <string>
 #include <iostream>
 #include "zonas/Zona.h"
+#include "trabalhadores/Trabalhador.h"
 
 #define ALL_TYPES "*"
 
@@ -55,6 +56,7 @@ private:
     //Jogo
     bool isRunning = false;
     int x = -1, y = -1;
+    std::list<Trabalhador*> workers;
     //Preco Edificios
     int p_mnF = 10, up_mnF = 15;
     int p_mnC = 10, up_mnC = 10;
@@ -82,6 +84,7 @@ public:
     bool isGameRunning() const;
     int getX() const;
     int getY() const;
+    int getNumberOfWorkers() const;
 };
 
 
