@@ -11,7 +11,7 @@ int CmdVende::execute(std::vector<std::string> *args)  {
                 std::cout << "A quantidade tem de ser um numero valido!\n"; //ADICIONAR QUANTIDADES EXISTENTES
                 return 0;
             }
-            int a = std::stoi(args->at(0));
+            int a = std::stoi(args->at(1));
             if (a <= 0) {
                 std::cout << "A quantidade tem de ser um numero positivo e dentro da quantidade existente!\n";
                 return 0;
